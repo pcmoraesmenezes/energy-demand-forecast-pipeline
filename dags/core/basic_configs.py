@@ -1,3 +1,6 @@
+import os
+
+
 BASE_URL = ' https://ons-aws-prod-opendata.s3.amazonaws.com/dataset/curva-carga-ho/CURVA_CARGA_'
 EXTENSION = '.csv'
 DATASET_PATH = '/opt/airflow/dags/data/energy_data.csv'
@@ -14,6 +17,14 @@ WEATHER_LOCATION = [
 ]
 
 BASE_TEMP_API = 'https://archive-api.open-meteo.com/v1/archive'
+BASE_FORECAST_API = 'https://api.open-meteo.com/v1/forecast'
 
 PANDEMIC_START_DATE = '2020-03-11'
 PANDEMIC_END_DATE = '2023-05-05'
+
+
+MLFLOW_TRACKING_URI = os.getenv("MLFLOW_TRACKING_URI", "http://localhost:5000")
+
+DATASET_PATH = '/opt/airflow/data/energy_data.csv'
+
+DATA_DIR = os.getenv("DATA_DIR", "/opt/airflow/data")
