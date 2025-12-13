@@ -1,7 +1,11 @@
 # logs
 
-logs/
+*.sqlite
 
+logs/
+mlruns
+config/
+models/
 # data
 data/
 
