@@ -28,7 +28,7 @@ def energy_update_pipeline():
     @task
     def run_update_process():
         """
-        Tarefa única que orquestra a verificação do ano, leitura do arquivo e update.
+        Main function to update the energy dataset with new weekly data.
         """
         now = pendulum.now('America/Sao_Paulo')
         current_year = now.year
