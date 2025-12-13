@@ -41,10 +41,11 @@ class ProphetTrainer:
             logger.info(f"Regressor added: {col}")
             
     
-    def train(self):
+    def train(self) -> Prophet:
         logger.info("Training the Prophet model.")
         self.model.fit(self.processed_df)
         logger.info("Model training completed.")
+        return self.model
             
     
     def save_model(self, model_name: str = 'prophet_model'):

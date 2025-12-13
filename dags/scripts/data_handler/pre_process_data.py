@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def update_new_data(existing_data: pd.DataFrame, year: int, file_path: str = '/opt/airflow/dags/data/energy_data.csv') -> None:
+def update_new_data(existing_data: pd.DataFrame, year: int, file_path: str = '/opt/airflow/data/energy_data.csv') -> None:
     logger.info(f'Updating data for year: {year}')
     
     last_week = 0
